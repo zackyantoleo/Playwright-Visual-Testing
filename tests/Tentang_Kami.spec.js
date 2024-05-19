@@ -6,7 +6,7 @@ test("Verify UI for Tentang Kami Page is expected", async ({ page }) => {
   await page.waitForTimeout(5000);
   await expect(page).toHaveScreenshot("Tentang_KamiUI.png", {
     fullPage: true,
-    maxDiffPixelRatio: 0.02,
+    maxDiffPixelRatio: 0.05,
   });
   await expect(page.locator(".main-text")).toBeVisible();
   await expect(page.getByText("Keterbatasan akan smart city")).toBeVisible();

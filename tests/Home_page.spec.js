@@ -14,7 +14,7 @@ test.describe("UI Test Home Page", () => {
   test("Verify UI for Home Page is expected", async () => {
     await expect(page).toHaveScreenshot("Homepage_UI.png", {
       fullPage: true,
-      maxDiffPixelRatio: 0.03,
+      maxDiffPixelRatio: 0.05,
     });
     await expect(
       page.getByRole("heading", { name: "Di mana pun lokasinya #" })

@@ -9,6 +9,14 @@ test.describe("Test Form Hubungi Kami", () => {
     await page.goto("https://higo.id/contact-us");
   });
 
+  test("Verify UI for Hubungi Kami Page is expected", async () => {
+    await page.waitForTimeout(5000);
+    await expect(page).toHaveScreenshot("Hubungi_KamiUI.png", {
+      fullPage: true,
+      maxDiffPixelRatio: 0.05,
+    });
+  });
+
   test("Verify user unable to submit the form with empty name", async () => {
     await page.getByPlaceholder("Nama", { exact: true }).fill("");
     await page.getByPlaceholder("E-mail").fill("test@example.com");

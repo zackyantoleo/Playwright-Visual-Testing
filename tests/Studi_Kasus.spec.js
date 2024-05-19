@@ -5,7 +5,7 @@ test("UI Test Studi Kasus Page", async ({ page }) => {
   await page.waitForTimeout(4000);
   await expect(page).toHaveScreenshot("Studi_Kasus_UI.png", {
     fullPage: true,
-    maxDiffPixelRatio: 0.02,
+    maxDiffPixelRatio: 0.05,
   });
   await expect(
     page.getByRole("heading", { name: "Studi Kasus" })

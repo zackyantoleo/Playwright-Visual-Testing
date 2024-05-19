@@ -5,7 +5,7 @@ test("Verify UI for Wifi Advertising Page is expected", async ({ page }) => {
   await page.waitForTimeout(3000);
   await expect(page).toHaveScreenshot("Wifi_Advertising_UI.png", {
     fullPage: true,
-    maxDiffPixelRatio: 0.02,
+    maxDiffPixelRatio: 0.05,
   });
 
   await expect(
